@@ -26,7 +26,7 @@ import jQuery from "jquery";
         target.addClass(className);
     }
 
-    var day = 0;
+    var day = 0
 
     document.addEventListener('scroll', () => {
         scroll = $(window).scrollTop();
