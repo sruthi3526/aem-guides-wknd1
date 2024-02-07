@@ -69,9 +69,10 @@
     "> 1%"
   ],
   "lint-staged": {
-    "*.js": [
-      "npx eslint --config .eslintrc.js"
-    ]
+      "src/**/*.{js,ts}": [
+        "eslint --ext .js,.ts --cache"
+      ]
+    }
   }
   
-}
+
