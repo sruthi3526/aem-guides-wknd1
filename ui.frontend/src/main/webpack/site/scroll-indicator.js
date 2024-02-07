@@ -22,9 +22,11 @@ import jQuery from "jquery";
         className = "scrolly",
         scroll;
 
-    if ($(window).scrollTop() > 15)
+    if ($(window).scrollTop() > 15){
         target.addClass(className);
-    
+    }
+
+    var day = 0;
 
     document.addEventListener('scroll', () => {
         scroll = $(window).scrollTop();
