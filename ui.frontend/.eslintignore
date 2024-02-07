@@ -1,3 +1,4 @@
 ../ui.apps/
 ./src/main/webpack/tests/
-../ui.frontend/src/main/webpack/site/util.js
+/ui.frontend/src/main/webpack/site/util.js
+util.js

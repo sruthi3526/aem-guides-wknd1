@@ -3,10 +3,14 @@ module.exports =  {
     extends:  [
       'plugin:@typescript-eslint/recommended',  // Uses the recommended rules from the @typescript-eslint/eslint-plugin
     ],
+    "ignorePatterns": [
+      "util.js",
+      //"scroll-indicator.js",
+    ],
     parserOptions:  {
       ecmaVersion:  2018,  // Allows for the parsing of modern ECMAScript features
       sourceType:  'module',  // Allows for the use of imports
-    },
+    },  
     rules:  {
         "curly": 1,
         "@typescript-eslint/explicit-function-return-type": [0],
