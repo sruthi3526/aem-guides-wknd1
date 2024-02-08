@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+
+  <suppression>
+    <cpe>cpe:2.3:a:apache-commons-codec:1.14:.*:.*:.*</cpe>
+    <overrideReason>Vulnerability fixed in version 1.15, already upgraded in project.</overrideReason>
+  </suppression>
+
+  <suppression>
+    <cpe>cpe:2.3:a:junit:4.12:.*:.*:.*</cpe>
+    <reason>Test-only dependency, not relevant to security.</reason>
+  </suppression>
+
+  <feed update frequency="DAILY" url="https://ossindex.sonatype.org/data/releases"/>
+  <feed update frequency="DAILY" url="https://nvd.nist.gov/vuln/feeds/json/nvdcve-1.1-recent.json"/>
+
+  <properties>
+    <authorsReportEnabled>false</authorsReportEnabled>
+    <dependenciesFoundReportEnabled>false</dependenciesFoundReportEnabled>
+    <suppressedReportEnabled>true</suppressedReportEnabled>
+  </properties>
+
+</suppressions>

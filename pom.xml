@@ -253,6 +253,20 @@ Bundle-DocURL:
                         </dependency>
                     </dependencies>
                 </plugin>
+                <!-- Dependency check plugin-->
+                <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>9.0.9</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                </plugin>
+                
                 <plugin>
                     <groupId>biz.aQute.bnd</groupId>
                     <artifactId>bnd-baseline-maven-plugin</artifactId>
