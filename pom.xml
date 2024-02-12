@@ -55,7 +55,7 @@
         <sling.password>admin</sling.password>
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
-        <frontend-maven-plugin.version>1.12.0</frontend-maven-plugin.version>
+        <frontend-maven-plugin.version>1.15.0</frontend-maven-plugin.version>
         <bnd.version>5.1.2</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -66,8 +66,10 @@
         <wknd-shared.version>3.1.0</wknd-shared.version>
         <wknd-shared.65.version>2.2.2</wknd-shared.65.version>
         <aemanalyser.version>1.5.8</aemanalyser.version>
+	<sonar.organization>sruthi3526</sonar.organization>
+  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>    
     </properties>
-
+   	
     <organization>
         <name>Adobe</name>
         <url>http://www.adobe.com/</url>
@@ -116,6 +118,13 @@
                 </dependencies>
             </plugin>
             <!-- Maven Source Plugin -->
+	    <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.10.0.2594</version> <!-- Update this with the latest version -->
+            </plugin>
+
+		
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
