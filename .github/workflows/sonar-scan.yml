@@ -72,7 +72,8 @@ jobs:
           mkdir -p sonar-scanner-cli
           unzip ${{ runner.temp }}/sonar-scanner-cli-4.6.2.2472-linux.zip -d sonar-scanner-cli
           ls
-          pwd
+          var=pwd
+          cd var
           ls
         # unzip sonar-scanner-cli-4.6.2.2472-linux.zip
         
