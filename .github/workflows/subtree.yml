@@ -1,0 +1,26 @@
+name: Subtree to AEM Main Repo
+ 
+on:
+  workflow_dispatch:
+    inputs:
+      REPO:
+        description: "Specify Tenant"
+        required: true
+ 
+jobs:
+  subtree_to_aem_main:
+    runs-on: self-hosted
+    steps:
+      - name: pull code
+        run: git clone https://github.com/Swa-DevOps/CM-AEM-MAIN.git HEAD:cm/qa
+ 
+      - name: adding tenant repo
+        run: |
+          git remote add $REPO https://github.com/Swa-DevOps/CM-AEM-TONOMUS.git HEAD:cm/qa
+          git fetch $REPO
+      - name: Subtree
+        run: |
+          git subtree add --prefix=$REPO https://github.com/Swa-DevOps/CM-AEM-TONOMUS.git cm/qa
+      - name: Push changes to AEM Main Repo
+        run: |
+          git push https://github.com/Swa-DevOps/CM-AEM-MAIN.git cm/qa
