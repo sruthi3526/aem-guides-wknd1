@@ -73,6 +73,7 @@ jobs:
           unzip ${{ runner.temp }}/sonar-scanner-cli-4.6.2.2472-linux.zip -d sonar-scanner-cli
           ls
           pwd
+          ls
         # unzip sonar-scanner-cli-4.6.2.2472-linux.zip
         
       # export PATH=$PATH:${PWD}/sonar-scanner-cli-4.6.2.2472-linux/bin
