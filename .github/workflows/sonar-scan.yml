@@ -1,1 +1,18 @@
+name: sonar-scan
+on:
+  workflow_dispatch:
 
+    inputs:
+      module:
+        description: 'Enter module name'
+        required: true
+      configuration:
+        description: 'Configuration'
+        required: true
+      code_branch:
+        description: 'Code_branch'
+        required: true
+ 
+jobs:
+  build:
+    runs-on: windows-latest
