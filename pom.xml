@@ -66,8 +66,10 @@
         <wknd-shared.version>3.1.0</wknd-shared.version>
         <wknd-shared.65.version>2.2.2</wknd-shared.65.version>
         <aemanalyser.version>1.5.8</aemanalyser.version>
+	<sonar.organization>sruthi3526</sonar.organization>
+  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>    
     </properties>
-
+   	
     <organization>
         <name>Adobe</name>
         <url>http://www.adobe.com/</url>
