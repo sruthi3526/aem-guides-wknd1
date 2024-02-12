@@ -3,24 +3,33 @@ name: Subtree to AEM Main Repo
 on:
   workflow_dispatch:
     inputs:
-      REPO:
+      repo:
         description: "Specify Tenant"
         required: true
+      tenant_branch:
+        description: "Specify Tenant branch"
+        required: true
+      main_branch:
+        description: "Specify Main branch"
+        required: true  
+      prefix:
+        description: "Specify prefix(folder-name)"
+        required: true  
  
 jobs:
   subtree_to_aem_main:
     runs-on: self-hosted
     steps:
       - name: pull code
-        run: git clone https://github.com/Swa-DevOps/CM-AEM-MAIN.git HEAD:cm/qa
+        run: git pull https://github.com/sruthi3526/CM-AEM-MAIN.git HEAD:${{github.event.inputs.main_branch}}
  
       - name: adding tenant repo
         run: |
-          git remote add $REPO https://github.com/Swa-DevOps/CM-AEM-TONOMUS.git HEAD:cm/qa
-          git fetch $REPO
+          git remote add ${{github.event.inputs.prefix}} https://github.com/sruthi3526/${{github.event.inputs.repo}}.git HEAD:${{github.event.inputs.tenant_branch}}
+          git fetch 
       - name: Subtree
         run: |
-          git subtree add --prefix=$REPO https://github.com/Swa-DevOps/CM-AEM-TONOMUS.git cm/qa
+          git subtree add --prefix=${{github.event.inputs.prefix}} https://github.com/sruthi3526/${{github.event.inputs.repo}}.git HEAD:${{github.event.inputs.tenant_branch}}
       - name: Push changes to AEM Main Repo
         run: |
-          git push https://github.com/Swa-DevOps/CM-AEM-MAIN.git cm/qa
+          git push https://github.com/sruthi3526/${{github.event.inputs.repo}}.git HEAD:${{github.event.inputs.tenant_branch}}
