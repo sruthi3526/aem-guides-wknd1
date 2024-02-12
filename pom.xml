@@ -266,7 +266,6 @@ Bundle-DocURL:
                     </execution>
                 </executions>
                 </plugin>
-                
                 <plugin>
                     <groupId>biz.aQute.bnd</groupId>
                     <artifactId>bnd-baseline-maven-plugin</artifactId>
