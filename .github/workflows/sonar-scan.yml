@@ -70,7 +70,7 @@ jobs:
         run: |
           curl -o ${{ runner.temp }}/sonar-scanner-cli-4.6.2.2472-linux.zip  https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip 
           mkdir -p sonar-scanner-cli
-          unzip ${{ runner.temp }}/sonar-scanner-msbuild-5.5.1.42999-net46.zip -d sonar-scanner-cli
+          unzip ${{ runner.temp }}/sonar-scanner-cli-4.6.2.2472-linux.zip -d sonar-scanner-cli
           ls
           pwd
         # unzip sonar-scanner-cli-4.6.2.2472-linux.zip
