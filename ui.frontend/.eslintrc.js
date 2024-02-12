@@ -14,6 +14,7 @@ module.exports =  {
     rules:  {
         "curly": 1,
         "@typescript-eslint/explicit-function-return-type": [0],
+        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
         "@typescript-eslint/no-explicit-any": [0],
         "ordered-imports": [0],
         "object-literal-sort-keys": [0],
