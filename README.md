@@ -9,8 +9,8 @@ WKND versions are compatible with the following versions of Adobe Experience Man
 | AEM as a Cloud Service | 3.x                 |
 | 6.5 SP17               | 2.x, 3.x                       |
 
-## Released artifacts
-
+## Released artifacts 
+## sample line
 ![Maven CI](https://github.com/adobe/aem-guides-wknd/actions/workflows/maven.yml/badge.svg)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem.guides/aem-guides-wknd/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem.guides/aem-guides-wknd)
 
